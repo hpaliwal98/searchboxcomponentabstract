@@ -1,0 +1,1 @@
+Search Box Component Abstract
