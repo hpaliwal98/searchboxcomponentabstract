@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { ISearchBoxProps } from '../Props/ISearchBoxProps';
 import { ISearchBoxStates } from '../States/ISearchBoxStates';
-// import { Configuration } from '../Helpers/Configuration';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faMicrophone, faMinus, faPlus, faSliders } from '@fortawesome/free-solid-svg-icons';
 // import { CommonHelper } from '../Helpers/CommonHelper';
 // import { FeatureHelper } from '../Helpers/FeatureHelper';
 // import { Constants } from '../Helpers/Constants';
+// import { Configuration } from '../Helpers/Configuration';
 
 export default class SearchBoxComponent extends React.Component<ISearchBoxProps, ISearchBoxStates> {
 

@@ -1,5 +1,5 @@
 {
-  "name": "searchboxcomponent",
+  "name": "abstract-searchbox",
   "version": "1.0.0",
   "description": "Search Box Component for MS Search",
   "main": "lib/index.js",
