@@ -4,11 +4,11 @@ export interface ISearchBoxProps {
     onSearchBoxKeyPressHandler: (e: any) => void;
     onSearchBoxKeyDownHandler: (e: any) => void;
     onSearchBoxChangeHandler: (e: any) => void;
-    GetParameterByNameFromQueryString: (name: any, url?: string) => string;
+    GetParameterByNameFromQueryString: (name: any, url?: any) => string | null;
     voiceSearchEnabled: boolean;
     suggestionsEnabled: boolean;
     advancedSearchQuery: boolean;
     // store: any;
-    styles: any;
+    // styles: any;
     // Actions: any;
 }

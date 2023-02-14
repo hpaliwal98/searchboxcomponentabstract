@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ISearchBoxProps } from '../Props/ISearchBoxProps';
 import { ISearchBoxStates } from '../States/ISearchBoxStates';
-
+import styles  from '../Styles/UnifiedSearch.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faMicrophone, faMinus, faPlus, faSliders } from '@fortawesome/free-solid-svg-icons';
 // import { CommonHelper } from '../Helpers/CommonHelper';
@@ -34,8 +34,7 @@ export default class SearchBoxComponent extends React.Component<ISearchBoxProps,
             showSuggestions: false,
             voiceSearchEnabled: nextProps.voiceSearchEnabled,
             advancedSearchQuery: nextProps.advancedSearchQuery,
-            searchQueryText: currentSearchTerm,
-            styles: nextProps.styles
+            searchQueryText: currentSearchTerm
         }
     }
 
@@ -102,8 +101,8 @@ export default class SearchBoxComponent extends React.Component<ISearchBoxProps,
 
     public render(): React.ReactElement<ISearchBoxProps> {
         return (
-            <div className={this.state.styles.searchBox}>
-                <input className={this.state.styles.searchInputBox}
+            <div className={styles.searchBox}>
+                <input className={styles.searchInputBox}
                     id='unifiedSearchBox'
                     type='text'
                     placeholder='Search...'
@@ -113,9 +112,9 @@ export default class SearchBoxComponent extends React.Component<ISearchBoxProps,
                     value={this.state.searchQueryText}
                 ></input>
                 {this.state.suggestionsEnabled && this.state.showSuggestions &&
-                    <ul className={this.state.styles.suggestions}>
-                        <li> <div className={this.state.styles.groupHeading}>Suggestions</div>
-                            <ul className={this.state.styles.subSuggestions}>
+                    <ul className={styles.suggestions}>
+                        <li> <div className={styles.groupHeading}>Suggestions</div>
+                            <ul className={styles.subSuggestions}>
                                 <li id='SearchBoxSuggestion'>service now</li>
                                 <li>enterprise search</li>
                                 <li>test</li>
@@ -124,8 +123,8 @@ export default class SearchBoxComponent extends React.Component<ISearchBoxProps,
                                 <li>well</li>
                             </ul>
                         </li>
-                        <li> <div className={this.state.styles.groupHeading}>Business</div>
-                            <ul className={this.state.styles.subSuggestions}>
+                        <li> <div className={styles.groupHeading}>Business</div>
+                            <ul className={styles.subSuggestions}>
                                 <li>service now</li>
                                 <li>enterprise search</li>
                                 <li>test</li>
@@ -134,8 +133,8 @@ export default class SearchBoxComponent extends React.Component<ISearchBoxProps,
                                 <li>well</li>
                             </ul>
                         </li>
-                        <li> <div className={this.state.styles.groupHeading}>Function</div>
-                            <ul className={this.state.styles.subSuggestions}>
+                        <li> <div className={styles.groupHeading}>Function</div>
+                            <ul className={styles.subSuggestions}>
                                 <li>service now</li>
                                 <li>enterprise search</li>
                                 <li>test</li>
@@ -146,23 +145,23 @@ export default class SearchBoxComponent extends React.Component<ISearchBoxProps,
                         </li>
                     </ul>
                 }
-                <FontAwesomeIcon icon={faMagnifyingGlass} title='Search' className={this.state.styles.searchIcon}></FontAwesomeIcon>
+                <FontAwesomeIcon icon={faMagnifyingGlass} title='Search' className={styles.searchIcon}></FontAwesomeIcon>
                 {this.state.voiceSearchEnabled &&
-                    <FontAwesomeIcon icon={faMicrophone} title='Voice Search' className={this.state.styles.voiceSearchIcon}></FontAwesomeIcon>
+                    <FontAwesomeIcon icon={faMicrophone} title='Voice Search' className={styles.voiceSearchIcon}></FontAwesomeIcon>
                 }
                 {this.state.advancedSearchQuery &&
                     <FontAwesomeIcon
                         icon={faSliders}
                         title='Prepare custom query'
                         onClick={() => this.showHideAdvanceFilters()}
-                        className={this.state.styles.advanceSearch}></FontAwesomeIcon>
+                        className={styles.advanceSearch}></FontAwesomeIcon>
                 }
-                {/* <div className={this.state.styles.mesIcons}>
+                {/* <div className={styles.mesIcons}>
                     {FeatureHelper.IsFeatureEnabled(Constants.Features.NavigationToOfficeSearch) &&
-                        <img className={this.state.styles.officeIcon} src={CommonHelper.GetCurrentSiteUrl() + Configuration.OfficeLogoUrl} alt='Modern Enterprise Search - Office' title='Search in Office for Enterprise scope' onClick={() => CommonHelper.NavigateToTargetLink(Configuration.OfficeSearchEndPointUrl, 'office')}></img>
+                        <img className={styles.officeIcon} src={CommonHelper.GetCurrentSiteUrl() + Configuration.OfficeLogoUrl} alt='Modern Enterprise Search - Office' title='Search in Office for Enterprise scope' onClick={() => CommonHelper.NavigateToTargetLink(Configuration.OfficeSearchEndPointUrl, 'office')}></img>
                     }
                     {FeatureHelper.IsFeatureEnabled(Constants.Features.NavigationToBingSearch) &&
-                        <img className={this.state.styles.bingIcon} src={CommonHelper.GetCurrentSiteUrl() + Configuration.BingLogoUrl} alt='Modern Enterprise Search - Bing' title='Search in Bing for Enterprise scope' onClick={() => CommonHelper.NavigateToTargetLink(Configuration.BingSearchEndPointUrl, 'bing')}></img>
+                        <img className={styles.bingIcon} src={CommonHelper.GetCurrentSiteUrl() + Configuration.BingLogoUrl} alt='Modern Enterprise Search - Bing' title='Search in Bing for Enterprise scope' onClick={() => CommonHelper.NavigateToTargetLink(Configuration.BingSearchEndPointUrl, 'bing')}></img>
                     }
                 </div> */}
             </div >
