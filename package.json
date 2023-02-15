@@ -1,6 +1,6 @@
 {
   "name": "abstract-searchbox",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Search Box Component for MS Search",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

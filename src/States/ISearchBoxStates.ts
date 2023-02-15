@@ -5,7 +5,4 @@ export interface ISearchBoxStates {
     voiceSearchEnabled: boolean;
     advancedSearchQuery: boolean;
     searchQueryText: string;
-    // store: any;
-    styles: any;
-    // Actions: any;
 }

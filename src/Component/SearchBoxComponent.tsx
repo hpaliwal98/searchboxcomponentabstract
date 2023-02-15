@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ISearchBoxProps } from '../Props/ISearchBoxProps';
 import { ISearchBoxStates } from '../States/ISearchBoxStates';
-import styles  from '../Styles/UnifiedSearch.module.scss';
+import styles from "../Styles/UnifiedSearch.module.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faMicrophone, faMinus, faPlus, faSliders } from '@fortawesome/free-solid-svg-icons';
 // import { CommonHelper } from '../Helpers/CommonHelper';
@@ -117,6 +117,7 @@ export default class SearchBoxComponent extends React.Component<ISearchBoxProps,
                             <ul className={styles.subSuggestions}>
                                 <li id='SearchBoxSuggestion'>service now</li>
                                 <li>enterprise search</li>
+                                <li>modified comp</li>
                                 <li>test</li>
                                 <li>who is who</li>
                                 <li>tes suggestion</li>
@@ -126,6 +127,7 @@ export default class SearchBoxComponent extends React.Component<ISearchBoxProps,
                         <li> <div className={styles.groupHeading}>Business</div>
                             <ul className={styles.subSuggestions}>
                                 <li>service now</li>
+                                <li>modified comp</li>
                                 <li>enterprise search</li>
                                 <li>test</li>
                                 <li>who is who</li>

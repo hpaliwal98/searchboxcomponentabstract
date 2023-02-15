@@ -1,4 +1,4 @@
-require("./UnifiedSearch.module.scss");
+require('./UnifiedSearch.module.scss');
 
 const styles = {
   unifiedSearch: 'unifiedSearch_f1c5e75b',
